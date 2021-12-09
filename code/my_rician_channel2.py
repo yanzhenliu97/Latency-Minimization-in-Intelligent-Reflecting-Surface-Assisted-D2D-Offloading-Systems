@@ -91,7 +91,7 @@ class My_rician_channel():
         self.Phi_ND = correlation_matrix(N_D,r_user)      
         
         """rician factor"""
-        self.beta_IRS_user = 10**(40/10)
+        self.beta_IRS_user = 10**(20/10)
         self.beta_user = 10**(20/10)
         
         """pathloss"""
