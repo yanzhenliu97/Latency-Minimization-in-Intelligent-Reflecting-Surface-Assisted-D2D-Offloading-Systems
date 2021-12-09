@@ -77,16 +77,16 @@ def my_rician_channel(K,L,N_U,N_D,M_fai,position,return_los = False):
             H_up_down_bar[:,:,k,l] = np.matmul(np.expand_dims(a_t,1),np.conj(np.expand_dims(a_r,0)))
     
     """generate correlation matrix"""
-    r_irs = 0.9
-    r_AP = 0.9
-    r_user = 0.9
+    r_irs = 0.8
+    r_AP = 0.2
+    r_user = 0.8
     
     Phi_r = correlation_matrix(M_fai,r_irs)
     Phi_NU = correlation_matrix(N_U,r_user)
     Phi_ND = correlation_matrix(N_D,r_user)      
     
     """rician factor"""
-    beta_IRS_user = 10**(40/10)
+    beta_IRS_user = 10**(20/10)
     beta_user = 10**(20/10)
     
     """pathloss"""
