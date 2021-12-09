@@ -82,9 +82,9 @@ class My_rician_channel():
                 self.H_up_down_bar[:,:,k,l] = np.matmul(np.expand_dims(a_t,1),np.conj(np.expand_dims(a_r,0)))
         
         """generate correlation matrix"""
-        r_irs = 0.9
-        r_AP = 0.9
-        r_user = 0.9
+        r_irs = 0.8
+        r_AP = 0.2
+        r_user = 0.8
         
         self.Phi_r = correlation_matrix(M_fai,r_irs)
         self.Phi_NU = correlation_matrix(N_U,r_user)
